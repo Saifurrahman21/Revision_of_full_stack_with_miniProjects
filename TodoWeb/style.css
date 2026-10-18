@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #f1f1f1;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  padding: 30px 15px;
+}
+
+#main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+/* Main card */
+.card {
+  border: 1px solid #292929;
+  border-radius: 18px;
+  padding: 20px;
+  background-color: #050505;
+}
+
+/* Input field */
+#input {
+  width: 78%;
+  padding: 14px;
+  background-color: #151515;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+#input:focus {
+  border-color: #df4045;
+}
+
+/* Save button */
+.card > button:not(#deleteAll) {
+  padding: 14px 20px;
+  margin-left: 8px;
+  background-color: #df4045;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Task list */
+#taskList {
+  list-style: none;
+  margin-top: 25px;
+}
+
+#taskList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 16px;
+  border-bottom: 1px solid #191919;
+  font-size: 20px;
+  overflow-wrap: anywhere;
+}
+
+/* Individual Delete button */
+#taskList li button {
+  padding: 14px 16px;
+  background-color: #df4045;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  font-size: 16px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Delete All button */
+#deleteAll {
+  display: block;
+  margin: 25px 0 0 auto;
+  padding: 24px 20px;
+  background-color: #df4045;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Hover effects */
+.card > button:hover,
+#taskList li button:hover {
+  background-color: #b92f34;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 15px 10px;
+  }
+
+  .heading {
+    font-size: 26px;
+  }
+
+  .card {
+    padding: 14px;
+  }
+
+  #input {
+    width: 100%;
+  }
+
+  .card > button:not(#deleteAll) {
+    margin: 10px 0 0;
+  }
+
+  #taskList li {
+    padding: 14px 0;
+    font-size: 16px;
+  }
+
+  #taskList li button {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  #deleteAll {
+    padding: 16px;
+    font-size: 16px;
+  }
+}
